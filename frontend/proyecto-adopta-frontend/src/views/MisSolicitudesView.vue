@@ -33,7 +33,10 @@ const cancelar = async (idSolicitud) => {
 }
 
 const verHistorial = (idSolicitud) => {
-  router.push(`/solicitudes/historial/${idSolicitud}`)
+  router.push({
+    name: 'HistorialSolicitud',
+    params: { idSolicitud }
+  })
 }
 </script>
 

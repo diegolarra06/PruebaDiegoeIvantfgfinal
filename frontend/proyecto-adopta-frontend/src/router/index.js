@@ -36,6 +36,13 @@ const routes = [
     meta: { requiereAuth: true }
   },
   {
+  path: '/solicitudes/historial/:idSolicitud',
+  name: 'HistorialSolicitud',
+  component: () => import('@/views/HistorialSolicitudView.vue'),
+  props: true,
+  meta: { requiereAuth: true }
+ },
+  {
     path: '/iniciar-solicitud/:idAnimal',
     name: 'IniciarSolicitud',
     component: () => import('@/views/IniciarSolicitudView.vue'),
