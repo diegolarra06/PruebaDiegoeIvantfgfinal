@@ -50,14 +50,13 @@ public class AnimalServiceImpl implements AnimalService {
 	public Integer insertarAnimal(String nombre, String especie, Integer edad, String tamano, String personalidad,
 			String necesidades, String sanitario, String estado) {
 
-		// 🔥 AÑADIDO: evitar duplicados
+	
 		boolean existe = animalRepository.existsByNombreIgnoreCaseAndEspecieIgnoreCase(nombre, especie);
 
 		if (existe) {
-			return -1; // ya existe
+			return -1; 
 		}
 
-		// 👇 TU CÓDIGO ORIGINAL SIN TOCAR
 		AnimalEntity a = new AnimalEntity();
 		a.setNombre(nombre);
 		a.setEspecie(especie);
@@ -80,7 +79,6 @@ public class AnimalServiceImpl implements AnimalService {
 		if (a == null)
 			return 0;
 
-		// 🔥 AÑADIDO: evitar duplicado en otro animal
 		boolean existe = animalRepository.existsByNombreIgnoreCaseAndEspecieIgnoreCase(nombre, especie);
 
 		if (existe &&
@@ -89,7 +87,6 @@ public class AnimalServiceImpl implements AnimalService {
 			return -2;
 		}
 
-		// 👇 TU CÓDIGO ORIGINAL SIN TOCAR
 		a.setNombre(nombre);
 		a.setEspecie(especie);
 		a.setEdad(edad);

@@ -197,9 +197,26 @@ const recortar = (texto, max = 120) => {
 
 .grid-animales {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(4, minmax(220px, 250px));
   gap: 20px;
-  margin: 20px 0;
+  margin: 20px auto;
+  justify-content: center;
+}
+
+.grid-animales > * {
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .grid-animales {
+    grid-template-columns: repeat(2, minmax(220px, 250px));
+  }
+}
+
+@media (max-width: 576px) {
+  .grid-animales {
+    grid-template-columns: minmax(220px, 300px);
+  }
 }
 
 @media (max-width: 768px) {

@@ -67,7 +67,6 @@ public class AnimalesController {
 		Integer res = animalService.insertarAnimal(nombre, especie, edad, tamano, personalidad,
 				necesidadesEspeciales, estadoSanitario, estado);
 
-		// 🔥 CONTROL DE DUPLICADOS
 		if (res == -1) {
 			model.addAttribute("error", "❌ Ya existe un animal con ese nombre y especie");
 			model.addAttribute("resultado", null);
