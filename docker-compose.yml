@@ -12,6 +12,8 @@ services:
       SPRING_DATASOURCE_URL: jdbc:mysql://host.docker.internal:3306/adopta_un_companero?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
       SPRING_DATASOURCE_USERNAME: root
       SPRING_DATASOURCE_PASSWORD: PracticaRoot
+    volumes:
+    - ./uploads:/app/uploads
     networks:
       - adopta_net
 

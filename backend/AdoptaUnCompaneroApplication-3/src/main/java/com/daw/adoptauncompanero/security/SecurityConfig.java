@@ -70,7 +70,10 @@ public class SecurityConfig {
 
             .authorizeHttpRequests(auth -> auth
 
-
+                .requestMatchers(
+                org.springframework.http.HttpMethod.GET,
+                "/uploads/**"
+                ).permitAll()
 
                 .requestMatchers(
                         org.springframework.http.HttpMethod.GET,

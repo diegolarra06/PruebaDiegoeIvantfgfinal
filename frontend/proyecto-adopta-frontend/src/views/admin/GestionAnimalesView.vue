@@ -292,7 +292,7 @@ const borrarImagen = async (idImagen) => {
           <td>{{ a.idAnimal }}</td>
           <td>
             <img v-if="a.imagenPrincipal"
-                 :src="`http://localhost:8080/uploads/${a.imagenPrincipal}`"
+                 :src="`/uploads/${a.imagenPrincipal}`"
                  :alt="a.nombre"
                  class="thumb" />
             <span v-else class="text-muted">—</span>
